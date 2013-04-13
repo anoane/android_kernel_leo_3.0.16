@@ -40,6 +40,7 @@
 
 #include <mach/board.h>
 #include <mach/msm_hsusb.h>
+#define DEBUG 1
 #include <linux/device.h>
 #include <mach/msm_hsusb_hw.h>
 #include <mach/clk.h>
@@ -2552,6 +2553,7 @@ static int msm72k_probe(struct platform_device *pdev)
 	int retval;
 
 	dev_dbg(&pdev->dev, "msm72k_probe\n");
+	pr_info("msm72k_probe\n");
 	ui = kzalloc(sizeof(struct usb_info), GFP_KERNEL);
 	if (!ui)
 		return -ENOMEM;
